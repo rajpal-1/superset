@@ -238,7 +238,7 @@ class Chart extends React.PureComponent<ChartProps, {}> {
     });
   }
 
-  renderErrorMessage(QueryResponse: QueryResponse) {
+  renderErrorMessage(queryResponse: QueryResponse) {
     const {
       chartId,
       chartAlert,
