@@ -1946,6 +1946,10 @@ class SqlaTable(
             templatable_statements += [
                 f.clause for f in security_manager.get_rls_filters(self)
             ]
+            if is_feature_enabled("EMBEDDED_SUPERSET"):
+                templatable_statements += [
+                    f["clause"] for f in security_manager.get_guest_rls_filters(self)
+                ]
         for statement in templatable_statements:
             if ExtraCache.regex.search(statement):
                 return True
