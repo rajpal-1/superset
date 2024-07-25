@@ -130,19 +130,19 @@ def test_tab_deletion_multiple_reports(
 
     expected_calls = [
         call(
-            to="admin@fab.org",
+            to=users[0].email,
             subject="[Report: report 1] Deactivated",
             html_content=ANY,
             config=ANY,
         ),
         call(
-            to="gamma@fab.org",
+            to=users[1].email,
             subject="[Report: report 1] Deactivated",
             html_content=ANY,
             config=ANY,
         ),
         call(
-            to="gamma@fab.org",
+            to=users[1].email,
             subject="[Report: report 2] Deactivated",
             html_content=ANY,
             config=ANY,
@@ -161,7 +161,7 @@ def test_tab_deletion_multiple_reports(
 @patch.dict(
     "superset.extensions.feature_flag_manager._feature_flags", ALERT_REPORT_TABS=True
 )
-def test_mulitple_tabs_removed(
+def test_multitple_tabs_removed(
     send_email_smtp_mock: MagicMock,
     tabbed_dashboard: Dashboard,  # noqa: F811
     login_as_admin,
@@ -178,7 +178,7 @@ def test_mulitple_tabs_removed(
         name="report 2",
         dashboard=tabbed_dashboard,
         extra={"dashboard": {"anchor": tabs_to_delete[1]}},
-        owners=[users[3]],
+        owners=[users[2]],
     )
 
     assert report1.active is True
@@ -194,19 +194,19 @@ def test_mulitple_tabs_removed(
 
     expected_calls = [
         call(
-            to="admin@fab.org",
+            to=users[0].email,
             subject="[Report: report 1] Deactivated",
             html_content=ANY,
             config=ANY,
         ),
         call(
-            to="gamma@fab.org",
+            to=users[1].email,
             subject="[Report: report 1] Deactivated",
             html_content=ANY,
             config=ANY,
         ),
         call(
-            to="gamma_sqllab@fab.org",
+            to=users[2].email,
             subject="[Report: report 2] Deactivated",
             html_content=ANY,
             config=ANY,
