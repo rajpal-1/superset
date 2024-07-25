@@ -54,7 +54,7 @@ class UpdateDashboardCommand(UpdateMixin, BaseCommand):
     @transaction(on_error=partial(on_error, reraise=DashboardUpdateFailedError))
     def run(self) -> Model:
         self.validate()
-        assert self._model
+        assert self._model is not None
         self.process_tab_diff()
 
         # Update tags
@@ -121,7 +121,7 @@ class UpdateDashboardCommand(UpdateMixin, BaseCommand):
     def process_tab_diff(self) -> None:
         def find_deleted_tabs() -> list[str]:
             position_json = self._properties.get("position_json", "")
-            current_tabs = self._model.tabs
+            current_tabs = self._model.tabs  # type: ignore
             if position_json and current_tabs:
                 position = json.loads(position_json)
                 deleted_tabs = [
