@@ -36,7 +36,6 @@ const StyledDropdownButton = styled.div`
         border-radius: ${({ theme }) =>
           `${theme.gridUnit}px 0 0 ${theme.gridUnit}px`};
         margin: 0;
-        width: 120px;
       }
 
       &:disabled {
