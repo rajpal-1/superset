@@ -36,6 +36,40 @@ msgstr ""
 "Last-Translator: Abdalrahim G. Fakhouri <abdilra7eem@yahoo.com>\n"
 "PO-Revision-Date: 2024-07-14 15:10+0300\n"
 "Language-Team: ar <LL@li.org>\n"
+"POT-Creation-Date: 2024-07-30 17:32-0600\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+msgid ""
+"\n"
+"                The cumulative option allows you to see how your data "
+"accumulates over different\n"
+"                values. When enabled, the histogram bars represent the "
+"running total of frequencies\n"
+"                up to each bin. This helps you understand how likely it "
+"is to encounter values\n"
+"                below a certain point. Keep in mind that enabling "
+"cumulative doesn't change your\n"
+"                original data, it just changes the way the histogram is "
+"displayed."
+msgstr ""
+
+msgid ""
+"\n"
+"                The normalize option transforms the histogram values into"
+" proportions or\n"
+"                probabilities by dividing each bin's count by the total "
+"count of data points.\n"
+"                This normalization process ensures that the resulting "
+"values sum up to 1,\n"
+"                enabling a relative comparison of the data's distribution"
+" and providing a\n"
+"                clearer understanding of the proportion of data points "
+"within each bin."
+msgstr ""
+
+
 
 #: superset/reports/notifications/email.py:88
 #, python-format
@@ -229,13 +263,6 @@ msgstr "%s المقاييس المحفوظة"
 msgid "%s updated"
 msgstr "%s محدث"
 
-#: superset/reports/notifications/slack.py:76
-#, python-format
-msgid ""
-"*%(name)s*\n\n%(description)s\n\n<%(url)s|Explore in Superset>\n\n%(table)s\n"
-msgstr ""
-"*%(name)s*\n\n%(description)s\n\n<%(url)s|Explore in Superset>\n\n%(table)s\n"
-
 #: superset/reports/notifications/slack.py:93
 #, python-format
 msgid "*%(name)s*\n\n%(description)s\n\nError: %(text)s\n"
@@ -299,13 +326,27 @@ msgstr "15 دقيقة"
 #: superset-frontend/src/explore/controlPanels/sections.tsx:249
 msgid "1AS"
 msgstr "1كما"
+#, python-format
+msgid ""
+"*%(name)s*\n"
+"\n"
+"    %(description)s\n"
+"\n"
+"    Error: %(text)s\n"
+"    "
+msgstr ""
 
-#: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:364
-#: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:248
-#: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:518
-#: superset-frontend/src/explore/controlPanels/sections.tsx:246
-msgid "1D"
-msgstr "1D"
+#: superset/reports/notifications/slack.py:76
+#, python-format
+msgid ""
+"*%(name)s*\n"
+"\n"
+"%(description)s\n"
+"\n"
+"<%(url)s|Explore in Superset>\n"
+"\n"
+"%(table)s\n"
+msgstr ""
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:363
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:247
@@ -908,6 +949,12 @@ msgstr "إضافة/تحرير الفلاتر"
 #: superset-frontend/src/features/alerts/AlertReportModal.tsx:395
 msgid "Add Alert"
 msgstr "إضافة تنبيه"
+
+msgid "Add BCC Recipients"
+msgstr ""
+
+msgid "Add CC Recipients"
+msgstr ""
 
 #: superset/views/css_templates.py:40
 msgid "Add CSS Template"
@@ -2316,6 +2363,12 @@ msgstr "محور تصاعدي"
 msgid "Axis descending"
 msgstr "محور تنازلي"
 
+msgid "BCC recipients"
+msgstr ""
+
+
+
+
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:150
 msgid "BOOLEAN"
 msgstr "منطقيه"
@@ -2663,6 +2716,8 @@ msgstr "حسب القيمة: استخدام قيم المقاييس كمفتاح
 msgid "CANCEL"
 msgstr "إلغاء الأمر"
 
+msgid "CC recipients"
+msgstr ""
 #: superset-frontend/src/features/databases/DatabaseModal/index.tsx:1583
 msgid "CREATE DATASET"
 msgstr "إنشاء مجموعة بيانات"
@@ -3416,6 +3471,8 @@ msgstr "اختر نوع المخطط"
 msgid "Choose one of the available databases from the panel on the left."
 msgstr "اختر إحدى قواعد البيانات المتاحة من اللوحة الموجودة على اليسار."
 
+msgid "Choose one of the available databases on the left panel."
+msgstr "اختر إحدى قواعد البيانات المتاحة من اللوحة الموجودة على اليسار."
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:811
 msgid "Choose the annotation layer type"
 msgstr "اختر نوع طبقة التعليقات التوضيحية"
@@ -11272,6 +11329,11 @@ msgstr "حدود المحور الصادي الأساسي"
 msgid "Primary y-axis format"
 msgstr "تنسيق المحور الصادي الأساسي"
 
+
+msgid "Private Channels (Bot in channel)"
+
+msgstr ""
+
 #: superset-frontend/src/features/databases/DatabaseModal/SSHTunnelForm.tsx:181
 msgid "Private Key"
 msgstr "مفتاح خاص"
@@ -12964,7 +13026,13 @@ msgstr "تحديد كلّ العناصر"
 msgid "Select any columns for metadata inspection"
 msgstr "حدد أي أعمدة لفحص البيانات الوصفية"
 
-#: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/CrossFilters/ScopingModal/ScopingTreePanel.tsx:132
+msgid "Select catalog or type to search catalogs"
+msgstr ""
+
+#, fuzzy
+msgid "Select channels"
+msgstr "قواعد البيانات المدعومة"
+
 msgid "Select chart"
 msgstr "حدد الرسم البياني"
 
@@ -13727,6 +13795,11 @@ msgstr "مادة صلبة"
 
 #: superset/commands/exceptions.py:119
 msgid "Some roles do not exist"
+msgstr ""
+
+msgid ""
+"Something went wrong with embedded authentication. Check the dev console "
+"for details."
 msgstr "بعض الأدوار غير موجودة"
 
 #: superset-frontend/src/dashboard/components/URLShortLinkButton/index.tsx:64
@@ -14793,6 +14866,9 @@ msgstr ""
 msgid "The database returned an unexpected error."
 msgstr "قامت قاعدة البيانات بإرجاع خطأ غير متوقع."
 
+msgid "The database that was used to generate this query could not be found"
+msgstr ""
+
 #: superset/errors.py:147
 msgid "The database was deleted."
 msgstr "تم حذف قاعدة البيانات."
@@ -15305,6 +15381,15 @@ msgstr "مخطط الحمولة المرسلة غير صالح."
 msgid "The schema was deleted or renamed in the database."
 msgstr "تم حذف المخطط أو إعادة تسميته في قاعدة البيانات."
 
+msgid "The screenshot could not be downloaded. Please, try again later."
+msgstr ""
+
+msgid "The screenshot is being generated. Please, do not leave the page."
+msgstr ""
+
+msgid "The screenshot is now being downloaded."
+msgstr ""
+
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Contour/controlPanel.ts:63
 msgid "The size of each cell in meters"
 msgstr "حجم كل خلية بالأمتار"
@@ -15542,7 +15627,7 @@ msgid "There was an error fetching the favorite status: %s"
 msgstr "حدث خطأ أثناء جلب الحالة المفضلة: %s"
 
 #: superset-frontend/src/views/CRUD/utils.tsx:209
-msgid "There was an error fetching your recent activity:"
+msgid "There was an error fetching the filtered charts and dashboards:"
 msgstr "حدث خطأ أثناء جلب نشاطك الأخير:"
 
 #: superset-frontend/src/components/Chart/DrillBy/DrillByModal.tsx:470
@@ -15976,7 +16061,14 @@ msgstr ""
 msgid "This metric might be incompatible with current dataset"
 msgstr "قد يكون هذا المقياس غير متوافق مع مجموعة البيانات الحالية"
 
-#: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:530
+msgid "This option has been disabled by the administrator."
+msgstr ""
+
+msgid ""
+"This page is intended to be embedded in an iframe, but it looks like that"
+" is not the case."
+msgstr ""
+
 msgid ""
 "This section allows you to configure how to use the slice\n              to"
 " generate annotations."
@@ -16794,6 +16886,10 @@ msgstr "مضيف خادم Doris غير معروف \"%(hostname)s\"."
 #, python-format
 msgid "Unknown MySQL server host \"%(hostname)s\"."
 msgstr "مضيف خادم MySQL غير معروف \"%(hostname)s\"."
+
+#, python-format
+msgid "Unknown OceanBase server host \"%(hostname)s\"."
+msgstr ""
 
 #: superset/db_engine_specs/presto.py:1355
 msgid "Unknown Presto Error"
@@ -19254,7 +19350,10 @@ msgstr "في"
 
 #: superset-frontend/src/explore/components/controls/TextAreaControl.jsx:145
 msgid "in modal"
-msgstr "في النموذج"
+msgstr ""
+
+msgid "invalid email"
+msgstr ""
 
 #: superset-frontend/packages/superset-ui-core/src/validator/validateMapboxStylesUrl.ts:35
 msgid "is expected to be a Mapbox URL"

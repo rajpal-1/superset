@@ -1,4 +1,4 @@
-/*
+/**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -16,21 +16,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+import TagType from 'src/types/TagType';
+import { Tag } from '.';
 
-import { WordCloudFormData } from '../../src';
-import buildQuery from '../../src/plugin/buildQuery';
+export default {
+  title: 'Tags',
+  component: Tag,
+};
+export const InteractiveTag = (args: TagType) => <Tag {...args} />;
 
-describe('WordCloud buildQuery', () => {
-  const formData: WordCloudFormData = {
-    datasource: '5__table',
-    granularity_sqla: 'ds',
-    series: 'foo',
-    viz_type: 'word_cloud',
-  };
-
-  it('should build columns from series in form data', () => {
-    const queryContext = buildQuery(formData);
-    const [query] = queryContext.queries;
-    expect(query.columns).toEqual(['foo']);
-  });
-});
+InteractiveTag.args = {
+  editable: false,
+  name: 'Tag',
+};
